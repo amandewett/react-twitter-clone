@@ -6,6 +6,7 @@
 
 .postContainer {
     padding: 15px;
+    padding-bottom: 5px;
     display: flex;
     border-bottom: 1px solid var(--divider-color);
 }
@@ -17,10 +18,12 @@
 
 .post-text>.postTitle {
     display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .post-text>.postTitle>.postUserTag {
-    margin-left: 3px;
+    margin-left: 5px;
     color: #BDBDBD;
     font-weight: 300;
 }
@@ -33,7 +36,8 @@
 .post-text>.postText {
     font-size: 0.9rem;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
 .post-text>.postIcons {
