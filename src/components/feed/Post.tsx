@@ -1,6 +1,13 @@
 import "./Post.css";
 import { Avatar } from "@mui/material";
-import { Chat, Repeat, Favorite, Bookmark } from "@mui/icons-material";
+import {
+  Chat,
+  Repeat,
+  Favorite,
+  Bookmark,
+  Verfied,
+  Verified,
+} from "@mui/icons-material";
 
 const Post = ({ userName, userTag, date, postText, postImage }: any) => {
   // https://youtu.be/rJjaqSTzOxI?t=6645
@@ -11,14 +18,19 @@ const Post = ({ userName, userTag, date, postText, postImage }: any) => {
       {/* post header div */}
       <div className="post-text">
         <div className="postTitle">
-          <h3 className="postUserName">{userName}</h3>
+          <h3 className="postUserName">
+            {userName}{" "}
+            <span>
+              <Verified className="postVerifiedIcon" />
+            </span>
+          </h3>
           <h4 className="postUserTag">{`@${userTag}`}</h4>
           <p className="postDate">
             <span>&#183;</span> {date}
           </p>
         </div>
         {/* post content below */}
-        <div className="postText">{postText}</div>
+        <p className="postText">{postText}</p>
         {postImage && <img className="postImage" src={postImage} />}
         <div className="postIcons">
           <Chat />
