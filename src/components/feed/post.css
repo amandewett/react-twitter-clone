@@ -7,7 +7,6 @@
 .postContainer {
     padding: 15px;
     display: flex;
-    /* border-top: 1px solid var(--divider-color); */
     border-bottom: 1px solid var(--divider-color);
 }
 

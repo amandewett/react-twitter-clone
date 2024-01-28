@@ -30,3 +30,9 @@ jobs:
         run: if [ -d "/root/frontend_applications/samples/twitter/" ]; then rm -r /root/frontend_applications/samples/twitter/*; fi
       - name: Move new build
         run: ls && cd dist && mv -f * /root/frontend_applications/samples/twitter/
+  cleanning:
+    runs-on: [self-hosted, development]
+    needs: build
+    steps:
+      - name: Remove pulled project files
+        run: rm -r /root/actions_runners/twitter-action-runner/_work/react-twitter-clone/react-twitter-clone/*
