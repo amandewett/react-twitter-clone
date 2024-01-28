@@ -19,7 +19,7 @@ const Post = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           ratione nesciunt explicabo recusandae esse ea animi mollitia! Dicta
           iure laboriosam eligendi quia facilis dolorum animi iste, labore
-          doloremque possimus culpa?
+          doloremque possimus culpa
         </div>
         <div className="postIcons">
           <Chat />
