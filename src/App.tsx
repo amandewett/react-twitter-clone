@@ -1,19 +1,16 @@
 import "./App.css";
-import { X } from "@mui/icons-material";
+import { Sidebar, Feed, Widgets } from "./components";
 
 export default () => {
   return (
     <>
-      <div
-        style={{
-          height: "96vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <X style={{ fontSize: "20rem" }} />
+      <div className="app">
+        {/* <Feed /> */}
+        <Sidebar />
+        {/* Feed */}
+        <Feed />
+        {/* Widgets */}
+        <Widgets />
       </div>
     </>
   );

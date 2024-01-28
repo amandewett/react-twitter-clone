@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feed {
+    flex: 0.6 !important;
+    border-right: 1px solid var(--divider-color);
+    /* min-width: fit-content; */
+    overflow-y: scroll;
+}
+
+/* hides scrollbar for chrome, edge, opera and safari */
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
+/* hides scrollbar for IE and firefox */
+.feed {
+    /* for IE */
+    -ms-overflow-style: none;
+    /* for Firefox */
+    scrollbar-width: none;
+}
+
+.feed>.feedHeader {
+    position: sticky;
+    top: 0;
+    color: var(--white-color);
+    background-color: var(--bg-color);
+    z-index: 100;
+    padding: 15px 20px;
+    border-top: 1px solid var(--divider-color);
+    border-bottom: 1px solid var(--divider-color);
+}
+
+/* tweet box styling */
+.tweetBoxContainer {
+    border-bottom: 1px solid var(--divider-color);
+    padding-bottom: 15px !important;
+    padding-right: 10px;
+}
+
+.tweetBoxContainer>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetInput {
+    display: flex;
+    padding: 20px !important;
+}
+
+.tweetInput>textarea {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: white;
+    min-height: 80px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: var(--bg-color);
+}
+
+.tweetInput>textarea::placeholder {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.tweetInput>textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.bt-post {
+    position: sticky !important;
+    right: 0 !important;
+    font-family: inherit !important;
+    margin-left: auto !important;
+    width: 100px;
+    height: 40px !important;
+    border-radius: 30px !important;
+    border: none !important;
+    text-transform: inherit !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    background-color: var(--primary-color) !important;
+}
