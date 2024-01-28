@@ -2,26 +2,24 @@ import "./Post.css";
 import { Avatar } from "@mui/material";
 import { Chat, Repeat, Favorite, Bookmark } from "@mui/icons-material";
 
-const Post = () => {
+const Post = ({ userName, userTag, date, postText, postImage }: any) => {
   // https://youtu.be/rJjaqSTzOxI?t=6645
   return (
     <div className="postContainer">
+      {/* post avatar */}
       <Avatar src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" />
+      {/* post header div */}
       <div className="post-text">
         <div className="postTitle">
-          <h3 className="postUserName">Aman Dewett</h3>
-          <h4 className="postUserTag">@amandewett</h4>
+          <h3 className="postUserName">{userName}</h3>
+          <h4 className="postUserTag">{`@${userTag}`}</h4>
           <p className="postDate">
-            <span>&#183;</span> Mar 20,2023
+            <span>&#183;</span> {date}
           </p>
         </div>
-        <div className="postText">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          ratione nesciunt explicabo recusandae esse ea animi mollitia! Dicta
-          iure laboriosam eligendi quia facilis dolorum animi iste, labore
-          doloremque possimus culpa Lorem ipsum dolor sit amet consectetur
-          adipisicing elit.
-        </div>
+        {/* post content below */}
+        <div className="postText">{postText}</div>
+        {postImage && <img className="postImage" src={postImage} />}
         <div className="postIcons">
           <Chat />
           <Repeat />

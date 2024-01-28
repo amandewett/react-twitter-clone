@@ -37,7 +37,14 @@
     font-size: 0.9rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: justify;
+    text-align: start;
+}
+
+.post-text>.postImage {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .post-text>.postIcons {
