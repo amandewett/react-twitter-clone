@@ -5,7 +5,7 @@
 }
 
 .feed {
-    flex: 0.6 !important;
+    flex: 0.5;
     border-right: 1px solid var(--divider-color);
     /* min-width: fit-content; */
     overflow-y: scroll;
@@ -88,4 +88,63 @@
     font-weight: inherit !important;
     font-size: inherit !important;
     background-color: var(--primary-color) !important;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+    .feed {
+        flex: 0.6;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .feed {
+        flex: 0.7;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .feed {
+        flex: 0.8;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .feed {
+        flex: 0.9;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .feed>.feedHeader {
+        padding: 10px 10px;
+        font-size: 0.8rem;
+    }
+
+    .tweetBoxContainer {
+        padding-bottom: 8px !important;
+        padding-right: 5px;
+    }
+
+    .tweetInput {
+        padding: 10px !important;
+    }
+
+    .tweetInput>textarea {
+        min-height: 40px;
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+
+    .bt-post {
+        width: 50px;
+        height: 30px !important;
+        font-weight: 400 !important;
+        font-size: 0.8rem !important;
+    }
+
+    .user-avatar {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
 }

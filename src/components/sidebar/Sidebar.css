@@ -11,7 +11,7 @@
 .sidebar {
     padding-left: 20px;
     padding-right: 20px;
-    flex: 0.4;
+    flex: 0.2;
     border-right: 1px solid var(--divider-color);
 }
 
@@ -55,6 +55,7 @@
     font-family: inherit !important;
     margin-top: 20px !important;
     width: 90% !important;
+    height: 50px !important;
     padding: 13px !important;
     border-radius: 30px !important;
     border: none !important;
@@ -67,4 +68,43 @@
 .side-post-bt:hover {
     transition: background-color 300ms ease-out;
     background-color: var(--primary-color-dark) !important;
+}
+
+@media only screen and (max-width: 1300px) {
+    .sidebar {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex: 0.1;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .sidebarOption {
+        justify-content: end;
+    }
+
+    .sidebarOption>.MuiSvgIcon-root {
+        font-size: 1.5rem !important;
+    }
+
+    .sidebarOption>h2 {
+        display: none;
+    }
+
+    .side-post-bt {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .sidebar {
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+
+    .sidebar>.MuiSvgIcon-root {
+        font-size: 2rem !important;
+        padding-left: 0px;
+    }
 }

@@ -69,3 +69,65 @@
     align-self: center !important;
     color: var(--primary-color);
 }
+
+@media only screen and (max-width: 500px) {
+    .postContainer {
+        padding: 10px;
+        padding-bottom: 0px;
+    }
+
+    .post-text {
+        margin-left: 10px;
+    }
+
+    .post-text>.postTitle {
+        font-size: 0.8rem;
+    }
+
+    .post-text>.postTitle>.postDate {
+        font-size: 0.7rem;
+    }
+
+    .post-text>.postText {
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+
+    .post-text>.postIcons>.MuiSvgIcon-root {
+        font-size: 1.7rem !important;
+        padding: 5px;
+    }
+
+    .postVerifiedIcon {
+        font-size: 13px !important;
+    }
+
+    .user-avatar {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .post-text>.postTitle {
+        font-size: 0.6rem;
+    }
+
+    .post-text>.postTitle>.postDate {
+        font-size: 0.5rem;
+    }
+
+    .post-text>.postText {
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+
+    .post-text>.postIcons>.MuiSvgIcon-root {
+        font-size: 1.6rem !important;
+        padding: 6px;
+    }
+
+    .postVerifiedIcon {
+        font-size: 10px !important;
+    }
+}

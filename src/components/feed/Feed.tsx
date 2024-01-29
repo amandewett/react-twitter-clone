@@ -3,6 +3,7 @@ import { TweetBox, Post } from "../";
 import { useState, useEffect } from "react";
 import { DB, dateFormatter } from "../../utils";
 import { collection, getDocs } from "firebase/firestore";
+import FlipMove from "react-flip-move";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -25,19 +26,21 @@ const Feed = () => {
       <TweetBox refreshFeed={setPosts} />
 
       {/* list of posts */}
-      {posts.map((post: any) => {
-        return (
-          <Post
-            key={post.date.nanoseconds}
-            avatar={post.userAvatar}
-            userName={post.userName}
-            userTag={post.userTag}
-            date={dateFormatter(post.date)}
-            postText={post.text}
-            postImage={post.img}
-          />
-        );
-      })}
+      <FlipMove>
+        {posts.map((post: any) => {
+          return (
+            <Post
+              key={post.date.nanoseconds}
+              avatar={post.userAvatar}
+              userName={post.userName}
+              userTag={post.userTag}
+              date={dateFormatter(post.date)}
+              postText={post.text}
+              postImage={post.img}
+            />
+          );
+        })}
+      </FlipMove>
     </div>
   );
 };

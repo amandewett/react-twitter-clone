@@ -35,7 +35,10 @@ const TweetBox = ({ refreshFeed }: any) => {
       <div className="tweetBoxContainer">
         <form onSubmit={handlePost}>
           <div className="tweetInput">
-            <Avatar src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg" />
+            <Avatar
+              className="user-avatar"
+              src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
+            />
             <textarea
               placeholder="What is happening?"
               value={postContent}
