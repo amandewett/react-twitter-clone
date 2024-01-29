@@ -1,9 +1,5 @@
 import "./Widget.css";
-import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterTweetEmbed,
-} from "react-twitter-embed";
+import { TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
 import { Search } from "@mui/icons-material";
 import { CircularProgress } from "@mui/material";
 

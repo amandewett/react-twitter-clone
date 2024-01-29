@@ -16,7 +16,6 @@ const Post = ({
   postText,
   postImage,
 }: any) => {
-  // https://youtu.be/rJjaqSTzOxI?t=6645
   return (
     <div className="postContainer">
       {/* post avatar */}
