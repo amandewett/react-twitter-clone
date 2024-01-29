@@ -5,16 +5,22 @@ import {
   Repeat,
   Favorite,
   Bookmark,
-  Verfied,
   Verified,
 } from "@mui/icons-material";
 
-const Post = ({ userName, userTag, date, postText, postImage }: any) => {
+const Post = ({
+  avatar,
+  userName,
+  userTag,
+  date,
+  postText,
+  postImage,
+}: any) => {
   // https://youtu.be/rJjaqSTzOxI?t=6645
   return (
     <div className="postContainer">
       {/* post avatar */}
-      <Avatar src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" />
+      <Avatar src={avatar} />
       {/* post header div */}
       <div className="post-text">
         <div className="postTitle">

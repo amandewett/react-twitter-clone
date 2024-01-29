@@ -28,11 +28,11 @@
     position: sticky;
     top: 0;
     color: var(--white-color);
-    background-color: var(--bg-color);
     z-index: 100;
     padding: 15px 20px;
     border-top: 1px solid var(--divider-color);
     border-bottom: 1px solid var(--divider-color);
+    backdrop-filter: blur(10px);
 }
 
 /* tweet box styling */

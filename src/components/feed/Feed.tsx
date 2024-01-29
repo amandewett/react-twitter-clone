@@ -1,35 +1,43 @@
 import "./Feed.css";
 import { TweetBox, Post } from "../";
+import { useState, useEffect } from "react";
+import { DB, dateFormatter } from "../../utils";
+import { collection, getDocs } from "firebase/firestore";
 
 const Feed = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const postsCollection = collection(DB, "posts");
+      const postsSnapshot = await getDocs(postsCollection);
+      const postsList: any = postsSnapshot.docs.map((doc) => doc.data());
+      setPosts(postsList);
+    };
+    getPosts();
+  }, [DB]);
+
   return (
     <div className="feed">
       <div className="feedHeader">
         <h2>Home</h2>
       </div>
-      <TweetBox />
+      <TweetBox refreshFeed={setPosts} />
 
       {/* list of posts */}
-      <Post
-        userName={"Aman Dewett"}
-        userTag={"amandewett"}
-        date={"Mar 16, 2023"}
-        postText={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fiv"
-        }
-        postImage={
-          "https://i.pinimg.com/originals/0c/64/9a/0c649a17ec1e5f5ca340248b4ef4e4be.gif"
-        }
-      />
-      <Post
-        userName={"Aman Dewett"}
-        userTag={"amandewett"}
-        date={"Mar 16, 2023"}
-        postText={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fiv"
-        }
-        postImage={null}
-      />
+      {posts.map((post: any) => {
+        return (
+          <Post
+            key={post.date.nanoseconds}
+            avatar={post.userAvatar}
+            userName={post.userName}
+            userTag={post.userTag}
+            date={dateFormatter(post.date)}
+            postText={post.text}
+            postImage={post.img}
+          />
+        );
+      })}
     </div>
   );
 };

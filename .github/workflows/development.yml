@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
-      # - name: Get .env file
-      #   run: cp -r /root/env_files/videotube/.env /root/actions_runners/videotube-action-runner/_work/react-videotube/react-videotube/
+      - name: Get .env file
+        run: cp -r /root/env_files/twitter/.env /root/actions_runners/twitter-action-runner/_work/react-twitter-clone/react-twitter-clone/
   build:
     runs-on: [self-hosted, development]
     needs: fetch-env-file
