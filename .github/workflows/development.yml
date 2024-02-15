@@ -27,9 +27,9 @@ jobs:
       - run: npm install --save
       - run: npm run build
       - name: Remove previous build
-        run: if [ -d "/root/frontend_applications/samples/twitter/" ]; then rm -r /root/frontend_applications/samples/twitter/*; fi
+        run: if [ -d "/root/frontend_applications/twitter/" ]; then rm -r /root/frontend_applications/twitter/*; fi
       - name: Move new build
-        run: ls && cd dist && mv -f * /root/frontend_applications/samples/twitter/
+        run: ls && cd dist && mv -f * /root/frontend_applications/twitter/
   cleanning:
     runs-on: [self-hosted, development]
     needs: build
