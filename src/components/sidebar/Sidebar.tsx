@@ -1,12 +1,12 @@
 import "./Sidebar.css";
 import {
-  X,
   Home,
   Search,
   Notifications,
   Email,
   Person,
   MoreHoriz,
+  Coronavirus,
 } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { SidebarOption } from "../";
@@ -14,7 +14,7 @@ import { SidebarOption } from "../";
 const Sidebar = () => {
   return (
     <div className="sidebar text-color">
-      <X />
+      <Coronavirus />
       <SidebarOption text="Home" Icon={Home} isActive={true} />
       <SidebarOption text="Explore" Icon={Search} />
       <SidebarOption text="Notifications" Icon={Notifications} />
